@@ -1,9 +1,10 @@
 # SHOPPİNG CART
 
 ## Tecnologies I Used:
-- React Hooks
-- React Query
+- Typescript
 - Material UI
+- React Query
+- Styled Components
 
 ### Install
 
@@ -11,7 +12,6 @@
 
 - git clone https://github.com/AzeBilir/react-typescript-shopping-cart
 
-
-
 ### `npm install`
+
 ### `npm start`
