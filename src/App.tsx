@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import { AddShoppingCart } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 //Styles
-import { Wrapper } from "./App.styles";
+import { Wrapper, StyledButton } from "./App.styles";
 //Types
 
 export type CartItemType = {
@@ -33,7 +33,8 @@ const App = () => {
   );
   console.log(data);
 
-  const getTotalItems = () => null;
+  const getTotalItems = (items: CartItemType[]) =>
+    items.reduce((ack: number, item) => ack + item.amount, 0);
   const handleAddToCart = (clickedItem: CartItemType) => null;
   const handleRemoveFromCart = () => null;
 
@@ -45,7 +46,11 @@ const App = () => {
       <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
         Cart goes here
       </Drawer>
-
+      <StyledButton onClick={() => setCartOpen(true)}>
+        <Badge badgeContent={getTotalItems(cartItems)} color="error">
+          <AddShoppingCart />
+        </Badge>
+      </StyledButton>
       <Grid container spacing={3}>
         {data?.map((item) => (
           <Grid item key={item.id} xs={12} sm={4}>
