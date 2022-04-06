@@ -1,19 +1,15 @@
 # SHOPPİNG CART
 
-
 ## Tecnologies I Used:
-
-- Material UI
 - React Hooks
 - React Query
-
-
+- Material UI
 
 ### Install
 
-- Clone "portfolio" repository from Github
+- Clone "react-typescript-shopping-cart" repository from Github
 
-- git clone https://github.com/AzeBilir/porfolio
+- git clone https://github.com/AzeBilir/react-typescript-shopping-cart
 
 
 
